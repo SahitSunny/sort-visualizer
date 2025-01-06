@@ -58,27 +58,29 @@
           <option value="4">4.00x</option>
         </select>
       </span>
-      <a class="start">Sort</a>
+      <a class="start" onclick="genAI()">Sort</a>
       <a class="icon"><i class="fa fa-bars"></i></a>
     </div>
+
   </div>
+
   <div class="center">
     <div class="array"></div>
+    <div class="response-container">
+      <p id="response-algo">Recommended Algorithm</p>
+      <p id="response-reason">Reason</p>
+    </div>
   </div>
+  
   <footer class="footer">
-    <p>Created with <i class="fa fa-heart"></i> by Dharshak</p>
-    <p>
-      <a href="https://www.linkedin.com/in/dharshakch97/" target="_blank" class="link">
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-      </a>
-      <a href="https://github.com/dharshakch97" target="_blank" class="link">
-        <i class="fa fa-github" aria-hidden="true"></i>
-      </a>
-    </p>
+    <p>Created with <i class="fa fa-heart"></i> by Rajnandini</p>
   </footer>
   <script src="./scripts/app.js"></script>
   <script src="./scripts/helper.js"></script>
   <script src="./scripts/sort-algorithms.js"></script>
+  <script src="./scripts/ai.js"></script>
+  <script type="module" src="./scripts/config.js"></script>
+
 </body>
 
 </html>

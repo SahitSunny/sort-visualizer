@@ -1,4 +1,8 @@
 "use strict";
+
+window.list = [];
+window.algoValue = -1;
+
 const start = async () => {
   let algoValue = Number(document.querySelector(".algo-menu").value);
   let speedValue = Number(document.querySelector(".speed-menu").value);
@@ -28,7 +32,7 @@ const RenderList = async () => {
   let sizeValue = Number(document.querySelector(".size-menu").value);
   await clearScreen();
 
-  let list = await randomList(sizeValue);
+  list = await randomList(sizeValue);
   const arrayNode = document.querySelector(".array");
   console.log(arrayNode);
   console.log(list);
@@ -39,6 +43,8 @@ const RenderList = async () => {
     node.style.height = `${3.8 * element}px`;
     arrayNode.appendChild(node);
   }
+
+
 };
 
 const RenderArray = async (sorted) => {
@@ -88,8 +94,15 @@ const response = () => {
   }
 };
 
+const temp = () => {
+  console.log("temp called")
+}
+
 document.querySelector(".icon").addEventListener("click", response);
 document.querySelector(".start").addEventListener("click", start);
 document.querySelector(".size-menu").addEventListener("change", RenderScreen);
 document.querySelector(".algo-menu").addEventListener("change", RenderScreen);
 window.onload = RenderScreen;
+
+window.list = list;
+
